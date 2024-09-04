@@ -1,0 +1,19 @@
+@import "variables";
+// Header Styles
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $header-footer-bg;
+  padding: 15px 20px;
+  color: $header-footer-text;
+
+  div {
+    font-size: 1.2em;
+  }
+
+  div:first-child {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+}

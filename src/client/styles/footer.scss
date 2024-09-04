@@ -1,0 +1,11 @@
+@import "variables";
+// Footer Styles
+footer {
+  background-color: $header-footer-bg;
+  color: $header-footer-text;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

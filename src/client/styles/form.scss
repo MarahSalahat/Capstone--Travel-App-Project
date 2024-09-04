@@ -1,0 +1,50 @@
+@import "variables";
+
+// Form Styles
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  div {
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: $border-radius;
+    padding: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $primary-color; // Purple border
+    border-radius: $border-radius;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: $secondary-color;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
