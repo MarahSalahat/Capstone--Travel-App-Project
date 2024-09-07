@@ -22,3 +22,8 @@ The Capstone--Travel App is a project developed as part of Udacity’s curriculu
 - **Service Workers:** Implemented service workers to enable offline functionality and cache important assets.
 - **Testing:** Created unit tests for various methods using the Jest framework to ensure reliability and correctness of the application.
 - **Version Control:** Managed the project using Git and GitHub, including initializing repositories and pushing code updates.
+
+### Instructions to run the project:
+**To start the server** : npm start
+**To build the project** : npm run build
+**To run the project** : npm run dev
