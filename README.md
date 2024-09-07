@@ -24,6 +24,6 @@ The Capstone--Travel App is a project developed as part of Udacity’s curriculu
 - **Version Control:** Managed the project using Git and GitHub, including initializing repositories and pushing code updates.
 
 ### Instructions to run the project:
-**To start the server** : npm start
-**To build the project** : npm run build
-**To run the project** : npm run dev
+- **To start the server** : npm start
+- **To build the project** : npm run build
+- **To run the project** : npm run dev
