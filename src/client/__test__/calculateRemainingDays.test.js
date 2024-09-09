@@ -1,14 +1,44 @@
-
 const { calculateRemainingDays } = require('../js/calculateRemainingDays');
 
-test('the remaining days from now to the date of the trip', () => {
-    const now = new Date();
-    const futureDate = new Date();
-    futureDate.setDate(futureDate.getDate() + 8); 
+describe('calculateRemainingDays function', () => {
 
-    const futureDateString = futureDate.toISOString().split('T')[0]; 
+    test('returns correct remaining days for a trip 8 days in the future', () => {
+        const now = new Date();
+        const futureDate = new Date();
+        futureDate.setDate(futureDate.getDate() + 8); 
 
-    const expectedDays = Math.ceil((futureDate - now) / (1000 * 60 * 60 * 24));
+        const futureDateString = futureDate.toISOString().split('T')[0]; 
 
-    expect(calculateRemainingDays(futureDateString)).toBe(expectedDays);
+        const expectedDays = Math.ceil((futureDate - now) / (1000 * 60 * 60 * 24));
+
+        expect(calculateRemainingDays(futureDateString)).toBe(expectedDays);
+    });
+
+
+    test('returns correct remaining days for a trip 1 day in the future', () => {
+        const now = new Date();
+        const futureDate = new Date();
+        futureDate.setDate(futureDate.getDate() + 1); 
+
+        const futureDateString = futureDate.toISOString().split('T')[0]; 
+
+        const expectedDays = Math.ceil((futureDate - now) / (1000 * 60 * 60 * 24));
+
+        expect(calculateRemainingDays(futureDateString)).toBe(expectedDays);
+    });
+
+  
+
+    test('returns correct remaining days for a trip 365 days in the future', () => {
+        const now = new Date();
+        const futureDate = new Date();
+        futureDate.setDate(futureDate.getDate() + 365); 
+
+        const futureDateString = futureDate.toISOString().split('T')[0]; 
+
+        const expectedDays = Math.ceil((futureDate - now) / (1000 * 60 * 60 * 24));
+
+        expect(calculateRemainingDays(futureDateString)).toBe(expectedDays);
+    });
+
 });

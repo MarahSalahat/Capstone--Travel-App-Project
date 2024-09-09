@@ -1,1 +1,40 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>travel app planner</title><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><header><div class="">Logo</div><div class="">navigation</div></header><h1>Travel App Planner</h1><h2>Where are you need to go?</h2><form id="travelForm" onsubmit="return Client.handleSubmit(event)"><div><label for="location">Location:</label> <input id="city" name="city"><div id="city_error" style="color: red"></div></div><div><label for="date">Date:</label> <input type="date" id="date" name="date"><div id="date_error" style="color: red"></div></div><button>Submit</button></form><div id="details"><h2 id="days"></h2><p class="cityName"></p><p class="temp"></p><p class="max-temp"></p><p class="min-temp"></p><p class="weather"></p><div class="cityPic"></div></div><footer><p>This is a footer</p></footer></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Travel App Planner</title><style>/* Basic CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #f4f4f4;
+            padding: 1rem;
+            text-align: center;
+        }
+        #travelForm {
+            max-width: 600px;
+            margin: 1rem auto;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+        #details {
+            max-width: 600px;
+            margin: 1rem auto;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+            display: none; /* Hidden by default */
+        }
+        #details h2 {
+            margin-top: 0;
+        }</style><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><header><div>Logo</div><div>Navigation</div></header><main><form id="travelForm" onsubmit="return Client.handleSubmit(event)"><div><h1>Where do you want to go?</h1><label for="city">Location:</label> <input id="city" name="city"><div id="city_error" style="color: red"></div></div><div><label for="date">Date:</label> <input type="date" id="date" name="date"><div id="date_error" style="color: red"></div></div><button type="submit">Submit</button></form><div id="details"><h2 id="days"></h2><p class="weather"></p><p class="temp"></p><p class="max-temp"></p><p class="min-temp"></p><div class="cityPic"></div></div></main><footer><p>Done by Marah Salahat</p></footer><script>if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(error => {
+            console.error('Service Worker registration failed:', error);
+        });
+    });
+}</script></body></html>

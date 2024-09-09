@@ -83,12 +83,13 @@ const getWeather = async (longitude, latitude, remainingDays) => {
 const getCityPicture = async (city) => {
     try {
         const response = await axios.post('http://localhost:8000/getPicture', 
-            { city }
+            { city:cityInput.value },
+            { headers: { 'Content-Type': 'application/json' } }
         );
         return response.data;
     } catch (error) {
         console.error('Error fetching city picture:', error);
-        return { image: 'https://source.unsplash.com/random/640x480?city,morning,night?sig=1' };
+        return { image: 'https://source.unsplash.com/random/640x480?cityscape' };
     }
 };
 

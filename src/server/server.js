@@ -66,7 +66,6 @@ app.post('/getWeather', async (req, res) => {
 
 
 // POST Route for city picture
-// POST Route for city picture
 app.post('/getPicture', async (req, res) => {
     try {
         const { city } = req.body;
