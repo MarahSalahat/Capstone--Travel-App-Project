@@ -1,7 +1,7 @@
 # Capstone--Travel-App
 
 ## Overview
-The Capstone--Travel App is a project developed as part of Udacity’s curriculum. It allows users to input their desired travel location and date, providing information about the weather conditions on that date. If the trip is more than 7 days away, the app forecasts the weather, including the expected high and low temperatures, and displays an image of the location. The app integrates with three external APIs: one for obtaining location coordinates (latitude and longitude), another for weather data, and a third for location images.
+The Capstone--Travel App is a project developed as part of Udacity’s curriculum. It allows users to input their desired travel location and date, providing information about the weather conditions on that date. The app forecasts the weather, including the expected high and low temperatures, and displays an image of the location. The app integrates with three external APIs: one for obtaining location coordinates (latitude and longitude), another for weather data, and a third for location images.
 
 ### Technical Specifications:
 - **Node.js Version:** v20.10.0
@@ -23,7 +23,43 @@ The Capstone--Travel App is a project developed as part of Udacity’s curriculu
 - **Testing:** Created unit tests for various methods using the Jest framework to ensure reliability and correctness of the application.
 - **Version Control:** Managed the project using Git and GitHub, including initializing repositories and pushing code updates.
 
-### Instructions to run the project:
-- **To start the server** : npm start
-- **To build the project** : npm run build
-- **To run the project** : npm run dev
+### Installation Instructions:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/Capstone-Travel-App.git
+    cd Capstone-Travel-App
+    ```
+
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3. **Create a `.env` file in the root directory** with your API keys for GeoNames, Weatherbit, and Pixabay APIs:
+    ```bash
+    USERNAME_KEY=your_geonames_username
+    WEATHER_KEY=your_weatherbit_api_key
+    PICTURE_KEY=your_pixabay_api_key
+    ```
+
+4. **Build the project**:
+    ```bash
+    npm run build
+    ```
+
+5. **Start the development server**:
+    ```bash
+    npm run dev
+    ```
+
+6. **Start the production server**:
+    ```bash
+    npm start
+    ```
+
+### Instructions to Run the Project:
+- **To start the server** : `npm start`
+- **To build the project** : `npm run build`
+- **To run the project** : `npm run dev`
+
+
