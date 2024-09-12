@@ -24,11 +24,11 @@ const weatherApiKey = process.env.WEATHER_KEY;
 const pixabayApiKey = process.env.PICTURE_KEY;
 
 // Serve static files from 'dist' directory
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));e
 
 // Route to serve the main HTML file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    res.sendFile(path.join(__dirname, '../client/views/index.html'));
 });
 
 // POST Route for GeoNames city location
