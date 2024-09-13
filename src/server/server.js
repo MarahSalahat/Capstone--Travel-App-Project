@@ -24,7 +24,7 @@ const weatherApiKey = process.env.WEATHER_KEY;
 const pixabayApiKey = process.env.PICTURE_KEY;
 
 // Serve static files from 'dist' directory
-app.use(express.static(path.join(__dirname, 'dist')));e
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Route to serve the main HTML file
 app.get('/', (req, res) => {
