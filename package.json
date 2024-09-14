@@ -2,7 +2,7 @@
   "name": "capstone--travel-app",
   "version": "1.0.0",
   "description": "Capstone- Travel App with udacity project",
-  "main": "index.js",
+  "main": "src/client/index.js",
   "scripts": {
     "test": "jest",
     "start": "nodemon ./src/server/server.js",

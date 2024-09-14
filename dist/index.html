@@ -30,11 +30,13 @@
             margin-top: 0;
         }</style><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><header><div>Logo</div><div>Navigation</div></header><main><form id="travelForm" onsubmit="return Client.handleSubmit(event)"><div><h1>Where do you want to go?</h1><label for="city">Location:</label> <input id="city" name="city"><div id="city_error" style="color: red"></div></div><div><label for="date">Date:</label> <input type="date" id="date" name="date"><div id="date_error" style="color: red"></div></div><button type="submit">Submit</button></form><div id="details"><h2 id="days"></h2><p class="weather"></p><p class="temp"></p><p class="max-temp"></p><p class="min-temp"></p><div class="cityPic"></div></div></main><footer><p>Done by Marah Salahat</p></footer><script>if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
-            console.log('Service Worker registered with scope:', registration.scope);
-        }).catch(error => {
-            console.error('Service Worker registration failed:', error);
-        });
+        const swUrl = `${process.env.NODE_ENV === 'production' ? '/' : ''}service-worker.js`;
+        navigator.serviceWorker.register(swUrl)
+            .then(registration => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+                console.log('ServiceWorker registration failed: ', error);
+            });
     });
 }</script></body></html>

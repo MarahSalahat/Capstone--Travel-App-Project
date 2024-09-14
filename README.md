@@ -24,35 +24,31 @@ The Capstone--Travel App is a project developed as part of Udacity’s curriculu
 - **Version Control:** Managed the project using Git and GitHub, including initializing repositories and pushing code updates.
 
 ### Installation Instructions:
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/yourusername/Capstone-Travel-App.git
-    cd Capstone-Travel-App
-    ```
 
-2. **Install dependencies**:
+
+1. **Install dependencies**:
     ```bash
     npm install
     ```
 
-3. **Create a `.env` file in the root directory** with your API keys for GeoNames, Weatherbit, and Pixabay APIs:
+2. **Create a `.env` file in the root directory** with your API keys for GeoNames, Weatherbit, and Pixabay APIs:
     ```bash
     USERNAME_KEY=your_geonames_username
     WEATHER_KEY=your_weatherbit_api_key
     PICTURE_KEY=your_pixabay_api_key
     ```
 
-4. **Build the project**:
+3. **Build the project**:
     ```bash
     npm run build
     ```
 
-5. **Start the development server**:
+4. **Start the development server**:
     ```bash
     npm run dev
     ```
 
-6. **Start the production server**:
+5. **Start the production server**:
     ```bash
     npm start
     ```
